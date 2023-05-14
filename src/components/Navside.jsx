@@ -2,10 +2,12 @@ import styled from "styled-components"
 // import {ShoppingCartOutlined } from '@material-ui/icons'
 // import { Badge } from '@mui/material'
 import {mobile} from "../responsive";
+import {Link} from "react-router-dom";
+
 const Container = styled.div`
 height: 30px;
 margin-top: 10px;
-background-color: pink;
+background-color: white;
 ${mobile({display: "none", height: "50px"})}
 `;
 const Wrapper = styled.div`
@@ -15,7 +17,8 @@ justify-content: space-between;`
 
 const Left = styled.div`
 align-items: center;
-justify-content: center;`
+justify-content: center;
+margin: 0 510px 0;`
 
 const Language = styled.span`
 font-size: 16px;
@@ -31,22 +34,14 @@ const Navside = () => {
     <Container>
       <Wrapper>
                 <Left>
-                    <Language>All Items</Language>
-                    <Language>Sale Off</Language>
-                    <Language>Dresses</Language>
-                    <Language>Blouse</Language>
-                    <Language>Pants</Language>
-                    <Language>Skirt</Language>
-                    <Language>Bikini</Language>
-                    <Language>Accessories</Language>
-                    <Language>Shoes</Language>
-                    <Language>News Style</Language>
-                    <Language>Collection</Language>
-                    <Language>New In</Language>
-                    <Language>Tracks</Language>
-                    <Language>Feedback</Language>
-                    <Language>Supports</Language>
+                    
+                <Link to="/category" className="link" style={{color: 'inherit',textDecoration: 'none'}}><Language>Categories</Language></Link>
+                    <Link to="/productlist" className="link" style={{color: 'inherit',textDecoration: 'none'}}><Language>Product List</Language></Link>
+                    <Language>Support</Language>
+                    <Language>About Us</Language>
                 </Left>
+
+                
             </Wrapper>
     </Container>
   )

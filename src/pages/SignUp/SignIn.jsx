@@ -1,7 +1,13 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import Navbar from '../../components/Navbar';
 
 const Container = styled.div`
 color: #880e4f;`;
@@ -58,25 +64,28 @@ border-radius: 50px;
 `;
 
 export default function SignIn() {
+  
+  const { register, handleSubmit, watch } = useForm()
+  const onSubmit = data => console.log(data);
+  console.log(watch('username', 'email', 'password'))
+  return (
+    <div>
+    <Navbar/>
+    <Section >
+      <Container className="register">
+        <H2>Log In</H2>
+        <Span>Hello, welcome you sign to MEOW MEOW :3</Span>
 
-const{register, handleSubmit, watch} = useForm()
-const onSubmit = data=>console.log(data);
-console.log(watch('username', 'email','password'))
-    return (
-        <Section >
-            <Container className="register">
-                    <H2>Log In</H2>
-                    <Span>Hello, welcome you sign to MEOW MEOW :3</Span>
+        <Form id="form" className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+          <Input type="text" {...register("username")} placeholder="Username" />
+          <Input type="text" {...register("password")} placeholder="Password" />
 
-                    <Form id="form" className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-                        <Input type="text" {...register("username")} placeholder="Username" />
-                        <Input type="text" {...register("password")} placeholder="Password" />
-
-                        <Button className="btn">Sign In</Button>
-                    </Form>
-                    <Span>Don't have account? Register here.</Span> <br></br>
-                    <Span>Forgot password?</Span>
-            </Container>
-        </Section>
-    )
+          <Link to="/" className="link"><Button className="btn">Sign In</Button></Link>
+        </Form>
+        <Span>Don't have account? Register here.</Span> <br></br>
+        <Span>Forgot password?</Span>
+      </Container>
+    </Section>
+    </div>
+  )
 }

@@ -1,7 +1,10 @@
 import React from 'react'
 import { useForm } from "react-hook-form";
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import {
+  Link,
+} from "react-router-dom";
+import Navbar from '../../components/Navbar';
 
 const Container = styled.div`
 color: #880e4f;`;
@@ -51,7 +54,7 @@ font-weight: 400;
 font-size: 1em;
 cursor: pointer;
 border: none;
-margin-top: 10px;
+margin-top: 5px;
 padding: 10px;
 border-radius: 50px;
 `;
@@ -62,6 +65,8 @@ const{register, handleSubmit, watch, formState:{errors}} = useForm()
 const onSubmit = data=>console.log(data);
 console.log(watch('username', 'email','password'))
     return (
+      <div>
+      <Navbar/>
         <Section >
             <Container className="register">
                     <H2>Register</H2>
@@ -74,9 +79,11 @@ console.log(watch('username', 'email','password'))
                         <Input type="text" {...register("password")} placeholder="Password" />
                         <Input type="text" {...register("confirm-password")} placeholder="Confirm password" />
 
-                        <Button className="btn">Register</Button>
+                        <Link to="/signin" className="link" style={{color: 'inherit',textDecoration: 'none'}}><Button className="btn">Register</Button></Link>
+
                     </Form>
             </Container>
         </Section>
+        </div>
     )
 }

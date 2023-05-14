@@ -21,7 +21,7 @@ const Home = () => {
     
     <div className="container">
     <Announcement/>
-      <Navbar/>
+    <Navbar/>
       <Navside/>
       <Slider/>
       <Title><h1>

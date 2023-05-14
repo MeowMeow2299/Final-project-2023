@@ -1,7 +1,9 @@
 import styled from "styled-components"
-import Products from "../components/Products";
-import Newletter from "../components/Newletter";
-import Footer from "../components/Footer";
+import Products from "../../components/Products";
+import Newletter from "../../components/Newletter";
+import Footer from "../../components/Footer";
+import {Link} from "react-router-dom";
+
 
 const Container = styled.div`
 height: 60px;
@@ -17,6 +19,8 @@ const Logo = styled.h1`
 font-weight: bold;
 font-size: 45px;
 text-align: center;
+color: inherit;
+text-decoration: none;
 `;
 const Amix = styled.div`
 padding:5px 10px ;
@@ -72,7 +76,7 @@ const ProductList = () => {
   return (
     <Container>
       <Navbar>
-        <Logo>MEOW MEOW</Logo>
+      <Logo><Link to="/" style={{color: 'inherit',textDecoration: 'none'}}>MEOW MEOW</Link></Logo>
       </Navbar>
       <Amix>
         <Meowtitle>
@@ -80,7 +84,6 @@ const ProductList = () => {
         </Meowtitle>
       </Amix>
 
-      <Logo>Dresses</Logo>
       <FilterContainer>
         <Filter><FilterText>Filter Product</FilterText>
         <Select>

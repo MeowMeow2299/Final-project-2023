@@ -4,6 +4,12 @@ import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
 import { Add, Remove } from '@material-ui/icons';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 
 const Container = styled.div`
 
@@ -153,6 +159,7 @@ padding: 10px;
 background-color: pink;
 color: black;
 font-weight: 600;
+cursor: pointer;
 `;
 const Hr = styled.hr`
 background-color: #ffebef;
@@ -168,7 +175,7 @@ const Cart = () => {
         <Wrapper>
             <Title>YOUR BAG</Title>
             <Top>
-              <TopButton>CONTINUE SHOPPING</TopButton>
+            <Link to="/" className="link"><TopButton>CONTINUE SHOPPING</TopButton></Link>
               <TopTexts>
                 <TopText>Shopping Bag(2)</TopText>
                 <TopText>Your Wishlist(0)</TopText>
@@ -245,7 +252,7 @@ const Cart = () => {
                   <SummaryItemPrice>$ 69</SummaryItemPrice>
                 </SummaryItem>
 
-                <Button>CHECKOUT NOW</Button>
+                <Link to="/payment" className="link"><Button>CHECKOUT NOW</Button></Link>
               </Summary>
             </Bottom>
         </Wrapper>
