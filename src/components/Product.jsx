@@ -1,5 +1,6 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
+import {Link} from "react-router-dom";
 
 const Info = styled.div`
 opacity: 0.9;
@@ -75,7 +76,7 @@ const Product = ({item}) => {
         </Icon>
 
         <Icon>
-            <SearchOutlined/>
+        <Link to="/productdetailed" className="link" style={{color: 'inherit',textDecoration: 'none'}}><SearchOutlined/></Link>
         </Icon>
 
         <Icon>

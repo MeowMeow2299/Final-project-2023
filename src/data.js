@@ -1,7 +1,7 @@
 export const sliderItems =[
     {
         id: 1,
-        img:"./images/Slide 1.png",
+        img:"./images/Slide 4.png",
         title: "SUMMER SALE APRIL",
         desc: "NEW ITEMS FOR THIS SUMMER 2023! CHECK THEM NOW!",
         bg: "fce4ec",
@@ -26,115 +26,21 @@ export const sliderItems =[
 
 ];
 
-export const categories = [
-    {
-        id: "1",
-        img: "./images/1.png",
-        title: "Y2K STYLES",
-    },
-
-    {
-        id: "2",
-        img: "./images/2.png",
-        title: "FASHION UTRA",
-    },
-
-    {
-        id: "3",
-        img: "./images/3.png",
-        title: "SPORT STYLES",
-    },
-
-    {
-        id: "4",
-        img: "./images/Product 333.png",
-        title: "SUMMER BIKINI",
-    },
-
-    {
-        id: "5",
-        img: "./images/Product 222.png",
-        title: "SWEATIES",
-    },
-];
-
-
-export const allitem = [
-    {
-        id: "1",
-        img: "./images/1.png",
-        title: "Y2K STYLES",
-    },
-
-    {
-        id: "2",
-        img: "./images/2.png",
-        title: "FASHION UTRA",
-    },
-
-    {
-        id: "3",
-        img: "./images/3.png",
-        title: "SPORT STYLES",
-    },
-
-    {
-        id: "4",
-        img: "./images/Product 333.png",
-        title: "SUMMER BIKINI",
-    },
-
-    {
-        id: "5",
-        img: "./images/Product 222.png",
-        title: "SWEATIES",
-    },
-
-    {
-        id1: "6",
-        img1: "./images/1.png",
-        title1: "Y2K STYLES",
-    },
-
-    {
-        id1: "7",
-        img1: "./images/2.png",
-        title1: "FASHION UTRA",
-    },
-
-    {
-        id1: "8",
-        img1: "./images/3.png",
-        title1: "SPORT STYLES",
-    },
-
-    {
-        id1: "9",
-        img1: "./images/Product 333.png",
-        title1: "SUMMER BIKINI",
-    },
-
-    {
-        id1: "10",
-        img1: "./images/Product 222.png",
-        title1: "SWEATIES",
-    },
-];
 
 export const newProducts = [
     {
         id:1,
-        img:"./images/5.png",
+        img:"./images/Product 102.png",
     },
 
     {
         id:2,
-        img:"./images/6.png",
+        img:"./images/Product 103.png",
     },
 
     {
         id:3,
-        img:"./images/7.png",
+        img:"./images/Product 105.png",
     },
 
     {
@@ -161,4 +67,49 @@ export const newProducts = [
         id:8,
         img:"./images/Product 222.png",
     },
+
+    
+    {
+        id:9,
+        img:"./images/Product 444.png",
+    },
+
+    
+    {
+        id:10,
+        img:"./images/Product 555.png",
+    },
+
+    
+    {
+        id:11,
+        img:"./images/Product 666.png",
+    },
+
+    
+    {
+        id:12,
+        img:"./images/Product 777.png",
+    },
+
+    {
+        id:13,
+        img:"./images/Product 888.png",
+    },
+
+    {
+        id:14,
+        img:"./images/Product 999.png",
+    },
+
+    {
+        id:15,
+        img:"./images/Product 100.png",
+    },
+
+    {
+        id:16,
+        img:"./images/Product 101.png",
+    },
 ];
+

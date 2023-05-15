@@ -18,7 +18,7 @@ justify-content: space-between;`
 const Left = styled.div`
 align-items: center;
 justify-content: center;
-margin: 0 510px 0;`
+margin: 0 550px 0;`
 
 const Language = styled.span`
 font-size: 16px;
@@ -35,9 +35,9 @@ const Navside = () => {
       <Wrapper>
                 <Left>
                     
-                <Link to="/category" className="link" style={{color: 'inherit',textDecoration: 'none'}}><Language>Categories</Language></Link>
-                    <Link to="/productlist" className="link" style={{color: 'inherit',textDecoration: 'none'}}><Language>Product List</Language></Link>
-                    <Language>Support</Language>
+               
+                    
+                    
                     <Language>About Us</Language>
                 </Left>
 

@@ -15,9 +15,11 @@ import {
   Outlet,
   Link,
 } from "react-router-dom";
-import CategoryItem from "./components/CategoryItem";
-import Categories from "./components/Categories";
-import AllItems from "./components/AllItems";
+
+
+
+
+
 
 const Layout = () => {
   return (
@@ -67,8 +69,8 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/category",
-        element:<AllItems/>
+        path: "/productdetailed",
+        element:<Product/>
       },
     ]
   },

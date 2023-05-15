@@ -19,6 +19,7 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 30px;
 `;
 
 const Form = styled.div`

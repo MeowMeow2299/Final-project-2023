@@ -3,7 +3,8 @@ import Newletter from "../components/Newletter";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { Add, Remove } from "@material-ui/icons";
-
+import { useState } from "react";
+import "./Product.scss"
 const Container = styled.div`
 
 `;
@@ -98,7 +99,7 @@ const FilterColor = styled.div`
 width: 20px;
 height: 20px;
 border-radius: 50%;
-background-color: ${(props)=> props.color};
+background-color: ${(props) => props.color};
 margin: 0px 10px;
 cursor: pointer;
 `;
@@ -150,9 +151,10 @@ font-weight: 500;
 
 
 const Product = () => {
+  const [quantity, setQuantity] = useState(1);
   return (
     <Container>
-    <Navbar>
+      <Navbar>
         <Logo>MEOW MEOW</Logo>
       </Navbar>
       <Amix>
@@ -162,10 +164,10 @@ const Product = () => {
       </Amix>
       <Wrapper>
         <ImgContainer>
-          <Image src="./images/Product 111.png"/>
+          <Image src="./images/Product 106.png" />
         </ImgContainer>
         <InfoContainer>
-          <Title>Dress Exposed Back Lace Up Tie Up High Cup Plain Color Sexy</Title>
+          <Title>Tie Dye Crisscross Backless Split Thigh Dress</Title>
           <Desc>
             Fabric: Light stretch <br></br> <br></br>
             Type: Slim and Slim <br></br> <br></br>
@@ -174,35 +176,40 @@ const Product = () => {
           </Desc>
           <Price>$25</Price>
           <FilterContainer>
-          <Filter>
-          <FilterTitle>Color</FilterTitle>
-          <FilterColor color="orange"/>
-          </Filter>
+            <Filter>
+              <FilterTitle>Color</FilterTitle>
+              <FilterColor color="pink" />
+            </Filter>
 
-          <Filter>
-            <FilterTitle>Size</FilterTitle>
-            <FilterSize>
-              <FilterSizeOption>XS</FilterSizeOption>
-              <FilterSizeOption>S</FilterSizeOption>
-              <FilterSizeOption>M</FilterSizeOption>
-              <FilterSizeOption>L</FilterSizeOption>
-              <FilterSizeOption>XL</FilterSizeOption>
-            </FilterSize>
-          </Filter>
+            <Filter>
+              <FilterTitle>Size</FilterTitle>
+              <FilterSize>
+                <FilterSizeOption>XS</FilterSizeOption>
+                <FilterSizeOption>S</FilterSizeOption>
+                <FilterSizeOption>M</FilterSizeOption>
+                <FilterSizeOption>L</FilterSizeOption>
+                <FilterSizeOption>XL</FilterSizeOption>
+              </FilterSize>
+            </Filter>
           </FilterContainer>
           <AddContainer>
-            <Remove/>
-            <Amount>1</Amount>
-            <Add/>
+            <button onClick={() => setQuantity((prev) => (prev === 1 ? 1 : prev - 1))}>
+              -
+            </button>
+            {quantity}
+            <button onClick={() => setQuantity((prev) => prev + 1)}>
+              +
+            </button>
+
             <AmountContainer>
-              <Button>ADD TO CART</Button>
+              <Link to="/cart" className="link" style={{ color: 'inherit', textDecoration: 'none' }}><Button>ADD TO CART</Button></Link>
             </AmountContainer>
           </AddContainer>
-          
+
         </InfoContainer>
       </Wrapper>
-      <Newletter/>
-      <Footer/>
+
+      <Footer />
     </Container>
   )
 }

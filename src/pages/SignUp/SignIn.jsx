@@ -10,7 +10,9 @@ import {
 import Navbar from '../../components/Navbar';
 
 const Container = styled.div`
-color: #880e4f;`;
+color: #880e4f;
+`;
+
 
 const Section = styled.div`
   background-image: url("./images/background 2.png");
@@ -22,6 +24,7 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 30px;
 `;
 
 const Form = styled.div`
