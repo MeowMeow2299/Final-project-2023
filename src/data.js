@@ -113,3 +113,14 @@ export const newProducts = [
     },
 ];
 
+export const data = [
+    {
+      id: "3",
+      img: "./images/Product 888.png",
+      title: "Two-strings Violet Patteled Dresses Dreamer Day",
+      isNew: true,
+      oldPrice: 27,
+      price: 13,
+    },
+  ];
+

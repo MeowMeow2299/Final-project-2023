@@ -16,6 +16,7 @@ const [error, setError] = useState(false)
       }
       catch (err) {
         setError(true);
+        console.log(err)
       }
       setLoading(false)
     };

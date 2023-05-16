@@ -8,6 +8,7 @@ import ProductList from "./pages/ProductList/ProductList";
 import SignIn from "./pages/SignUp/SignIn";
 import SignUpPage from "./pages/SignUp/SignUpPage";
 import Payment from "./pages/Payment";
+import CardShop from "./components/CardShop";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
 
       {
         path: "/cart",
-        element:<Cart/>
+        element:<CardShop/>
       },
 
       {
